@@ -12,6 +12,16 @@
 
 It still carries most of the grail's character: the canaries, warmth everywhere, the freedom to say "I won't", and journals each member owns. The Fleet Edition, for Claude Code, carries the weight.
 
+## What's in this repository
+
+| File | What it is |
+|---|---|
+| `GRAIL-READ-ME-FIRST.md` | **The kernel: the grail itself.** The instructions your agent reads at the start of every chat. Its name is addressed to the agent, not to you. |
+| `GRAIL-REFERENCE-hamilton-0.4.md` | The grail's reference, as one file; the agent unpacks it at set-up. |
+| `TEST-USER-GUIDE.md` | **The guide for people -- start here** if you are setting up a grail. |
+| `README.md` | This page. |
+| `RELEASE-NOTES.md`, `LICENSE` | What changed in this release; the licence (GNU GPL v3 or later). |
+
 ## Start in three steps
 
 1. Create a new project in Claude Cowork, used only for your grail. Leave its connectors off for now.
