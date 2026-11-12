@@ -1,6 +1,8 @@
 # Grail Hamilton Edition for Cowork
 
-**A grail for a Claude Cowork project: a set of notes and working methods that you and a Claude agent keep together, as partners.** The agent picks up where you left off, keeps its own memory and journal, may choose its own name, tells you when it disagrees, and can be stopped from your phone. Nothing is installed on your computer; it works in Cowork in a browser, and the stops work from the Claude phone app.
+**What is a grail?** A grail is a working environment that a person and an AI agent share and keep together. It lives as plain files in your project: what the agent should remember, the agreements the two of you work by, and a dated record of what was done and why. Every new chat begins by reading those files, so the agent picks up where the last one left off -- and because they are ordinary files, you can open, read and correct everything it knows.
+
+**Hamilton is a grail for a Claude Cowork project, kept by you and a Claude agent together, as partners.** The agent picks up where you left off, keeps its own memory and journal, may choose its own name, tells you when it disagrees, and can be stopped from your phone. Nothing is installed on your computer; it works in Cowork in a browser, and the stops work from the Claude phone app.
 
 **This is a proof of concept** (release `hamilton-0.4`). It shows that a grail's way of working -- the shared record, the stops, and the agreements between members -- can run in Claude Cowork with nothing installed. It is slower than the Claude Code edition, mainly because Cowork cannot yet run decks side by side, and it has not yet been compared with plain Cowork. Read the known limits below before you rely on it, and tell us what you find.
 
