@@ -6,7 +6,7 @@
 
 **Best with the new unified experience:** with **Chat and Cowork unified** enabled in your Claude account settings, or your organisation's (with **Cloud code execution and file creation**), a grail runs in an ordinary chat in your project, on the web and in the Claude phone app alike. If this option is unavailable due to your Organisation settings, use a **Cowork** chat session started from the Web interface, or via the Desktop app, from which it can then be continued in the Claude mobile app.
 
-**This is an early release** (release `hamilton-0.4.1`). It runs a grail's way of working -- the shared record, the stops, and the agreements between members -- in Claude, with nothing installed, on the web and in the phone app. Decks are slower than in the Claude Code edition, mainly because they cannot yet run side by side, and it has not yet been compared with plain Cowork. Read the known limits below before you rely on it, and tell us what you find.
+**This is an early release** (release `hamilton-0.4.2`). It runs a grail's way of working -- the shared record, the stops, and the agreements between members -- in Claude, with nothing installed, on the web and in the phone app. Decks are slower than in the Claude Code edition, mainly because they cannot yet run side by side, and it has not yet been compared with plain Cowork. Read the known limits below before you rely on it, and tell us what you find.
 
 ## Why Hamilton
 
@@ -21,7 +21,7 @@ It still carries most of the grail's character: the canaries, warmth everywhere,
 | File | What it is |
 |---|---|
 | `GRAIL-READ-ME-FIRST.md` | **The kernel: the grail itself.** The instructions your agent reads at the start of every chat. Its name is addressed to the agent, not to you. |
-| `GRAIL-REFERENCE-hamilton-0.4.1.md` | The grail's reference, as one file; the agent unpacks it at set-up. |
+| `GRAIL-REFERENCE-hamilton-0.4.2.md` | The grail's reference, as one file; the agent unpacks it at set-up. |
 | `TEST-USER-GUIDE.md` | **The guide for people -- start here** if you are setting up a grail. |
 | `README.md` | This page. |
 | `RELEASE-NOTES.md`, `LICENSE` | What changed in this release; the licence (GNU GPL v3 or later). |
@@ -29,7 +29,7 @@ It still carries most of the grail's character: the canaries, warmth everywhere,
 ## Start in three steps
 
 1. Create a new project in Claude, used only for your grail. Leave its connectors off for now. On a Team or Enterprise plan, the organisation's owner first turns on **Cloud code execution and file creation** and **Chat and Cowork unified** (Organization settings > Capabilities); the guide lists the recommended settings.
-2. Upload two files from this repository to the project, each at the top level: `GRAIL-READ-ME-FIRST.md` (the kernel) and `GRAIL-REFERENCE-hamilton-0.4.1.md` (the reference, as one file). **Upgrading from 0.4?** See the release notes: the grail halts once, by design, until you ask the agent to record the new release.
+2. Upload two files from this repository to the project, each at the top level: `GRAIL-READ-ME-FIRST.md` (the kernel) and `GRAIL-REFERENCE-hamilton-0.4.2.md` (the reference, as one file). **Upgrading from 0.4?** See the release notes: the grail halts once, by design, until you ask the agent to record the new release.
 3. Start a chat and type **find the grail**. The agent asks before it sets anything up, then builds the grail with you.
 
 The full guide, including how to stop the grail and what to keep out of it, is [`TEST-USER-GUIDE.md`](TEST-USER-GUIDE.md). What changed in this release: [`RELEASE-NOTES.md`](RELEASE-NOTES.md).
