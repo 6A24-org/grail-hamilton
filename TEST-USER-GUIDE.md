@@ -1,6 +1,6 @@
 # Grail Cognitive Environment -- Hamilton Edition for Chat and Cowork: test-user guide
 
-**Early release, November 2026 (release hamilton-0.4.1).** Thank you for trying it. This page tells you what it is, how to set it up, and what to watch for.
+**Early release, November 2026 (release hamilton-0.4.2).** Thank you for trying it. This page tells you what it is, how to set it up, and what to watch for.
 
 ## What it is
 
@@ -24,27 +24,27 @@ A **grail** is a structured set of notes and working methods that you and a Clau
 
 1. **Create a new project** in Cowork, used only for your grail.
 2. **Leave the project's connectors off for now** (mail, drive, calendar, web search and so on). The agent will offer you two, **Calendar** and **Drive**, explain what each does and its one risk, and let you choose. See "Connectors" below.
-3. **Add two files from the download to the project,** each at the top level: the **kernel**, `GRAIL-READ-ME-FIRST.md` (the grail's core instructions, which the agent reads in every chat), and the **reference**, `GRAIL-REFERENCE-hamilton-0.4.1.md` (set-up steps, the grail's dictionary and its check-up, all in one file, because Cowork cannot upload a folder). Upload the kernel once only: the grail refuses to run if it finds two copies. Nothing else needs installing: no skills, no plugin.
+3. **Add two files from the download to the project,** each at the top level: the **kernel**, `GRAIL-READ-ME-FIRST.md` (the grail's core instructions, which the agent reads in every chat), and the **reference**, `GRAIL-REFERENCE-hamilton-0.4.2.md` (set-up steps, the grail's dictionary and its check-up, all in one file, because Cowork cannot upload a folder). Upload the kernel once only: the grail refuses to run if it finds two copies. Nothing else needs installing: no skills, no plugin.
 4. **Start a chat and say "find the grail".** The agent asks before it sets anything up, then builds the grail with you. It first unpacks the reference into a `reference/` folder, then asks your name and pronouns, tells you how it introduces itself: as a "grail agent" running on Claude, or by a personal name it may choose, never as plain "Claude", because your grail shapes how it works and thinks, and helps you choose a **house canary**, a short sentence it says at the start of every chat so you can tell your grail loaded. It also makes up a random **memory phrase**, which it says back in every chat to show its memory loaded too; you can choose your own instead if you like. It asks one question at a time. It also asks whether you would like a **personal deck**, a private corner for things like appointments or medication reminders.
 5. **One step is yours:** the agent gives you a short text to paste into the **project instructions** (the agent cannot write there). It makes every new chat start your grail by itself, with no need to type anything special.
     **Where the project instructions are:** (1) open the project: select it under **Projects** in the left sidebar, or under **Pinned** if you pinned it; (2) in the right-hand sidebar of the project's page, find the **Instructions** pane (not the Description) and click its pencil icon; (3) the **Set project instructions** window opens: paste the text in; (4) click **Save instructions**.
 6. **Open a new chat and ask anything.** Its first reply should begin:
 
-    I have found the Grail. (The seed was 'hamilton-0.4.1 xxxxx'.)
+    I have found the Grail. (The seed was 'hamilton-0.4.2 xxxxx'.)
     <your house canary> (Grail '...xxxxx'.)
     Memory check phrase: <your memory phrase>
 
    The first line names the kernel's version and a short mark that is written only inside the kernel (so it proves the agent really read it); the second ends with five characters that identify your grail (they match the last five of its Grail ID). If those lines are missing, the grail did not load properly. Tell us. After the Hamilton box, the help line and a short notice, the agent introduces itself: *This is <its name> (a Claude agent running in this Hamilton grail).* **The `Memory check phrase:` line must show your own phrase:** if it is missing, says `NOT LOADED`, or shows anything else, the agent's memory did not load, so it may not remember what you decided. **Change the phrase now and then** (ask the agent how), because an agent can repeat a phrase it saw earlier in a chat, or invent a plausible one.
 
-## Upgrading from hamilton-0.4
+## Upgrading from hamilton-0.4 or hamilton-0.4.1
 
-If your grail was set up on 0.4:
+If your grail was set up on 0.4 or 0.4.1:
 
-1. **Replace the two files** at the top level of the project with the new ones from the download: the kernel, `GRAIL-READ-ME-FIRST.md` (delete the old one first: the grail refuses to run with two), and the reference, `GRAIL-REFERENCE-hamilton-0.4.1.md`.
-2. **Start a new chat.** The grail will halt and say it found two different versions (0.4.1 in the kernel, 0.4 in its settings). That is expected: it is the check that a kernel was not swapped without anyone noticing.
+1. **Replace the two files** at the top level of the project with the new ones from the download: the kernel, `GRAIL-READ-ME-FIRST.md` (delete the old one first: the grail refuses to run with two), and the reference, `GRAIL-REFERENCE-hamilton-0.4.2.md`.
+2. **Start a new chat.** The grail will halt and say it found two different versions (0.4.2 in the kernel, 0.4 or 0.4.1 in its settings). That is expected: it is the check that a kernel was not swapped without anyone noticing.
 3. **Ask the agent to update the grail's settings to the new release** (`Kernel release:` in `GRAIL-CONFIG.md`). It will check with you first, then make the change and unpack the new reference, asking before it replaces any reference file you have changed.
 4. **Re-paste the project instructions:** ask the agent for the new text, and paste it in as you did at set-up (step 5 above).
-5. **Start one more new chat** and check that its first line names `hamilton-0.4.1`.
+5. **Start one more new chat** and check that its first line names `hamilton-0.4.2`.
 
 ## How your grail is laid out
 

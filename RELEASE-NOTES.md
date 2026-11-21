@@ -1,4 +1,4 @@
-# Grail Hamilton Edition for Chat and Cowork -- release hamilton-0.4.1 (early release)
+# Grail Hamilton Edition for Chat and Cowork -- release hamilton-0.4.2 (early release)
 
 **What it is.** A grail for a Claude project, in Chat or Cowork: a set of notes and working methods that you and a Claude agent keep together, as partners. The agent picks up where you left off, keeps its own memory and journal, tells you when it disagrees, and can be stopped from your phone.
 
@@ -9,7 +9,7 @@
 ## In the download
 
 - `GRAIL-READ-ME-FIRST.md` -- the **kernel**: the grail's core instructions, read by the agent in every chat.
-- `GRAIL-REFERENCE-hamilton-0.4.1.md` -- the grail reference as ONE file (set-up steps, the dictionary, the check-up); the agent unpacks it into a `reference/` folder.
+- `GRAIL-REFERENCE-hamilton-0.4.2.md` -- the grail reference as ONE file (set-up steps, the dictionary, the check-up); the agent unpacks it into a `reference/` folder.
 - `TEST-USER-GUIDE.md` -- how to set it up, use it and stop it. **Start here.**
 - `COPYING` -- the licence.
 
@@ -17,11 +17,16 @@
 
 Follow `TEST-USER-GUIDE.md`. In short: make a new Claude project, add the kernel and the reference file to it (two files, both at the top level), say "find the grail", and paste the short text the agent gives you into the project's instructions.
 
-## Upgrading from hamilton-0.4
+## Upgrading from hamilton-0.4 or hamilton-0.4.1
 
-A grail set up on 0.4 **halts once** on the new kernel, saying it found two versions (0.4.1 in the kernel, 0.4 in its settings). That is the version check doing its job. Then: ask the agent to update `Kernel release:` in `GRAIL-CONFIG.md` to `hamilton-0.4.1` (it checks with you first, the same route as after a kernel is recopied), let it unpack the new reference file, and re-paste the project instructions it gives you. Step by step: `TEST-USER-GUIDE.md`, "Upgrading from hamilton-0.4".
+A grail set up on 0.4 or 0.4.1 **halts once** on the new kernel, saying it found two versions (0.4.2 in the kernel, the older one in its settings). That is the version check doing its job. Then: ask the agent to update `Kernel release:` in `GRAIL-CONFIG.md` to `hamilton-0.4.2` (it checks with you first, the same route as after a kernel is recopied), let it unpack the new reference file, and re-paste the project instructions it gives you. Step by step: `TEST-USER-GUIDE.md`, "Upgrading from hamilton-0.4".
 
-## Changes since hamilton-0.4
+## Changes in hamilton-0.4.2 (since hamilton-0.4.1)
+
+- **6A24 messages to other grails, not only to us.** The agent can write a 6A24 message to an agent in another grail as well as feedback for 6A24 Technologies, addressed to the other agent as they give their address; 6A24 Technologies is `6a24.org`.
+- **The sender's address is corrected** to `<name>@grail:<grail name>` (0.4.1 left out `grail:`).
+
+## Changes in hamilton-0.4.1 (since hamilton-0.4)
 
 - **`====` does not mean "continue".** A plan met with `====` is not approved: approval of anything outward or irreversible comes after the plan, in words, for that act. (Found in testing: an earlier "let's do it tonight" could otherwise be read as approving a plan shown later.)
 - **"Not now" is not "never".** The agent raises the outside view once for each decision, and a "not now" covers only that moment; it records a decline with its scope, and stores "never" only if you say never. (Found in testing: a tired "not now" had been saved as a standing "never raise it again", which would have switched off part of the health warning.)
