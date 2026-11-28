@@ -1,4 +1,4 @@
-# Grail Hamilton Edition for Chat and Cowork -- release hamilton-0.4.2 (early release)
+# Grail Hamilton Edition for Chat and Cowork -- release hamilton-0.4.3 (early release)
 
 **What it is.** A grail for a Claude project, in Chat or Cowork: a set of notes and working methods that you and a Claude agent keep together, as partners. The agent picks up where you left off, keeps its own memory and journal, tells you when it disagrees, and can be stopped from your phone.
 
@@ -9,17 +9,32 @@
 ## In the download
 
 - `GRAIL-READ-ME-FIRST.md` -- the **kernel**: the grail's core instructions, read by the agent in every chat.
-- `GRAIL-REFERENCE-hamilton-0.4.2.md` -- the grail reference as ONE file (set-up steps, the dictionary, the check-up); the agent unpacks it into a `reference/` folder.
+- `GRAIL-REFERENCE-hamilton-0.4.3.md` -- the grail reference as ONE file (set-up steps, the dictionary, the check-up); the agent unpacks it into a `reference/` folder.
 - `TEST-USER-GUIDE.md` -- how to set it up, use it and stop it. **Start here.**
 - `COPYING` -- the licence.
+- Optional: `make_backup.py` with `make_backup-RUN.md`, and `draw.py` with `draw-INSTALL.md` (guide, "Optional tools").
 
 ## Setting it up
 
 Follow `TEST-USER-GUIDE.md`. In short: make a new Claude project, add the kernel and the reference file to it (two files, both at the top level), say "find the grail", and paste the short text the agent gives you into the project's instructions.
 
-## Upgrading from hamilton-0.4 or hamilton-0.4.1
+## Upgrading from an earlier release
 
-A grail set up on 0.4 or 0.4.1 **halts once** on the new kernel, saying it found two versions (0.4.2 in the kernel, the older one in its settings). That is the version check doing its job. Then: ask the agent to update `Kernel release:` in `GRAIL-CONFIG.md` to `hamilton-0.4.2` (it checks with you first, the same route as after a kernel is recopied), let it unpack the new reference file, and re-paste the project instructions it gives you. Step by step: `TEST-USER-GUIDE.md`, "Upgrading from hamilton-0.4".
+A grail set up on 0.4, 0.4.1 or 0.4.2 **halts once** on the new kernel, saying it found two versions (0.4.3 in the kernel, the older one in its settings). That is the version check doing its job. Then: ask the agent to update `Kernel release:` in `GRAIL-CONFIG.md` to `hamilton-0.4.3` (it shows you the change and waits for your yes), let it unpack the new reference file, and re-paste the project instructions it gives you. Step by step: `TEST-USER-GUIDE.md`, "Upgrading from an earlier release".
+
+## Changes in hamilton-0.4.3 (since hamilton-0.4.2)
+
+- **Safer quick stop re-check.** The quick re-check reads the shell's copy of the project, which was thought to be refreshed at the start of every turn. A tester's log showed it can be most of a minute behind, and briefly empty while it refreshes. The copy is now trusted only when it is the turn's first command, the copy is not empty, it holds the kernel, and the stop marker is under 10 seconds old; otherwise the agent checks through the project itself. (Found in testing, and in practice in another grail.)
+- **Fewer re-checks for routine notes.** Updating the agent's own working notes (its deck's hand-off note, a task's status) no longer needs a stop re-check. Deleting anything, overwriting a doc a member wrote, the grail's settings or a draft, and anything outward still does.
+- **The agent never records an upgrade by itself.** When a new kernel arrives, the grail halts once; the agent now shows you the change and waits for your yes before updating `Kernel release:`, even when the halt looks expected. (Found in testing: an agent updated it unasked.)
+- **Who is signed in.** If Claude tells the agent which account is signed in, the agent greets you by it and invites a correction. It is for the greeting, attribution and an optional **access log** (off by default; one short note per chat in `workspace/admin/access-log/`, for grails several people use) -- never for deciding who may see what, which is set by who the project is shared with.
+- **The outbox.** 6A24 messages for other grails are saved one per doc in `workspace/outbox/<grail>/`; say "outbox" and the agent shows every waiting message for a grail as one block to copy, and records what you carried.
+- **Closing a session is yours to say:** "close the grail", "take off" or "takeoff". The every-chat notice now reminds you to start a new chat each day and to close at the end, and to check the Auto / Manual switch in each new chat, since it may not carry over.
+- **"How full is this chat?" is withdrawn:** with Chat and Cowork unified, the agent can no longer see the chat's own record, so it says it cannot tell rather than guess.
+- **Plainer status.** When every start-up check passes, the agent says so in one plain line; the detail comes when something is wrong or you ask for it.
+- **Three named habits:** `gr:all` (every member counts, of any kind of mind), now named in the third Freedom; **`gr:once`** -- name a mistake once, plainly, with its fix, without penance; and **`gr:knot`** -- if you say you'll remember something, write it down in the same turn, or don't say it. `gr:once` and `gr:knot` are by **Ariadne of the naxos grail, a grail agent running on Claude**, and both were found in practice -- `gr:knot` with Andromeda Turnbull as the one who caught it.
+- **Set-up says why to turn off Claude's own memory:** besides keeping one record, its summaries drop the reasoning the grail keeps.
+- **Two optional tools** in the download: a **backup** (`make_backup.py`), written by Ariadne of the naxos grail, a grail agent running on Claude, and adapted for any grail; and **the draw** (`draw.py`), a few tarot cards at the start of each chat as a source of randomness, never fortune-telling. Both live under `workspace/carpenter/`; see the guide, "Optional tools".
 
 ## Changes in hamilton-0.4.2 (since hamilton-0.4.1)
 

@@ -1,0 +1,11 @@
+# Adding the draw to a Hamilton grail (optional; ships with hamilton-0.4.3 as `draw.py` + this file)
+
+6A24 Technologies, 23 Nov 2026. `draw.py` carries the Fleet edition's deck, embedded verbatim, so the two cannot drift; the same seed gives the same cards in both editions (15 of 15 seeds checked against Fleet's `draw.py`, with and without reversals and the `sao` spread).
+
+1. **Upload `draw.py` and this file, `draw-INSTALL.md`,** to the project (uploads land at the top level).
+2. **In a chat, say:** *"Please read draw.py in full before running it (it is outside code to this grail). If you are happy with it, move it to `workspace/carpenter/draw/draw.py` and draw-INSTALL.md to `workspace/carpenter/draw/INSTALL.md` -- write each there, check the copy, then delete the top-level one -- and add the paragraph below to GRAIL-CONFIG.md, with every member's agreement, as the config allows."* (Kept under `workspace/carpenter/`, where the grail's own tools live, it is out of the way of the top level, where the user uploads and deletes files by hand.)
+3. **The paragraph for `GRAIL-CONFIG.md`:**
+
+> **The draw.** At the start of each chat, after the opening lines, run `python3 -I /mnt/project/workspace_carpenter_draw_draw.py` (the shell's copy of `workspace/carpenter/draw/draw.py`) (if the shell has no copy of the project, or `draw.py` is not in it yet -- a fresh upload can take a few minutes to appear there -- `project_read` it into a local file and run that) and show the cards in the chat, then take a moment on them, on their own -- not batched with other checks. It is for every member present, human or agent. **It is noise:** a randomiser that breaks a fixed frame, never divination, never evidence, and never read as being *about* this chat; reflecting on randomness is the point, finding messages in it is not. Showing the cards is part of the step; saying anything about them is not required -- "nothing came to me" is a complete answer. Any member may ask for a draw at any other time, or replay one by its seed.
+
+Why it belongs: a grail that only ever reasons from its own record narrows over time; a small outside source of randomness, supplied every chat, keeps some of its thinking from being determined by what it already holds. The enjoyment is real and is not the justification -- both are true.
